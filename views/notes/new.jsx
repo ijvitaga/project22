@@ -8,6 +8,7 @@ class Index extends React.Component {
         <form action="/notes/" method="post">
           <input type="text" placeholder="type your narrative" name="note" />
           <input type="submit" value="create entry" />
+          <input type="date" name="date" defaultValue={Date.now} />
         </form>
       </Layout>
     );

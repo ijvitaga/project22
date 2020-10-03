@@ -5,7 +5,7 @@ class Index extends React.Component {
   render() {
     const { notes } = this.props
     return (
-      <Layout title="My Story">
+      <Layout title="Personal.">
         <h1> The Story of Me </h1>
         <a href="/notes/new">
           <button>New Entry</button>
@@ -13,6 +13,7 @@ class Index extends React.Component {
         {notes.map((note) => (
         <div>
         <h2>{note.note}</h2>
+        <h2>{note.date}</h2>
         <form action={`/notes/${note._id}?_method=DELETE`} method="POST">
           <input type="submit" value="delete" />
         </form>

@@ -22,7 +22,7 @@ class Layout extends React.Component {
               </nav>
             </h3>
           </header>
-          <h4>Take a moment to empty your thoughts onto a virtual page each day where only you can see them. Be free from the demands of life and capture the moments that matter to you through this digital diary. Reduce stress, self-reflect, and relive the experiences that truly matter, because you are interesting.</h4>
+          <h4>Take a moment to empty your thoughts onto a virtual page where only you can see them. Be free from the demands of life and capture the moments that matter to you through this digital diary. Reduce stress, self-reflect, and relive the experiences that truly matter, because you are interesting.</h4>
           <main>{this.props.children}</main>
           <footer>
           </footer>

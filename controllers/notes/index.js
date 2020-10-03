@@ -17,44 +17,41 @@ router.get("/", auth, async(req, res) => {
   }
 })
 
-// New Route
+// New
 router.get("/new", auth, async (req, res) => {
   res.render("notes/new.jsx")
 })
 
-// Delete Route
+// Delete
 router.delete("/:id", auth, async (req, res) => {
   await Note.findByIdAndDelete(req.params.id);
   res.redirect("/notes");
 })
 
-// Update Route
+// Update
 router.put("/edit/:id", auth, async (req, res) => {
   req.body.username = req.session.username
   await Note.findByIdAndUpdate(req.params.id, req.body)
   res.redirect("/notes/")
 })
 
-// Create Route
+// Create
 router.post("/", auth, async (req, res) => {
   req.body.username = req.session.username
   const newNote = await Note.create(req.body)
   res.redirect("/notes/")
 })
 
-// Edit Route
+// Edit
 router.get("/edit/:id", auth, async (req, res) => {
   const note = await Note.findById(req.params.id)
   res.render("notes/edit.jsx", {note})
 })
 
-//TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
 
 router.get("/", auth, (req, res) => {
   res.send("if you see this you are logged in");
 });
 
-///////////////////////////////////////
-// Export Router
-///////////////////////////////////////
+
 module.exports = router;
