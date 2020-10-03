@@ -1,0 +1,42 @@
+h1 {
+    color: rgb(218, 185, 80);
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Satisfy', cursive;
+}
+
+header {
+    text-align: center;
+}
+
+.title {
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Satisfy', cursive;
+    font-Size: 200px;
+    background-color: rgb(39, 135, 173);
+}
+
+main {
+    text-align: center;
+}
+
+header h3 span {
+    word-spacing: 50px;
+    color: blue;
+}
+
+h4 {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: rgb(39, 135, 173);
+}
+
+input[type=submit] {
+    background-color: rgb(39, 135, 173);
+}
+
+html {
+    background-color: rgb(248, 243, 225);
+}
